@@ -1,0 +1,109 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  text-align: center;
+
+  background-color: rgb(255, 255, 255);
+}
+.container {
+  width: 600px;
+  display: grid;
+  grid-template-areas:
+    "t1 t2"
+    "d r"
+    "f f"
+    "m m"
+    "p p";
+
+  grid-template-rows: auto auto 70px 70px 70px;
+  gap: 20px;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container > * {
+  padding: 10px;
+}
+
+table {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-collapse: collapse;
+
+  font-size: 20px;
+  box-shadow: 0px 0px 20px rgb(195, 195, 195);
+}
+
+th {
+  background-color: rgb(41, 41, 41);
+  color: white;
+  padding: 10px 40px;
+}
+td {
+  padding: 10px;
+  font-weight: bold;
+}
+
+tr:nth-of-type(2n + 1) {
+  background-color: rgba(207, 207, 207, 0.348);
+}
+
+.t1 {
+  grid-area: t1;
+}
+.t2 {
+  grid-area: t2;
+}
+.data {
+  grid-area: d;
+}
+.result {
+  grid-area: r;
+}
+.fit {
+  grid-area: f;
+}
+.model {
+  grid-area: m;
+}
+.predict {
+  grid-area: p;
+}
+input {
+  width: 200px;
+  height: 32px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 20px;
+  background-color: rgb(233, 233, 233);
+}
+button {
+  width: 100px;
+  border: 0;
+  height: 34px;
+  border-radius: 15px;
+  outline: none;
+  background-color: rgb(72, 72, 72);
+  color: white;
+  font-weight: bold;
+}
+#fitLog,
+#modelDiv,
+#preDiv {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}

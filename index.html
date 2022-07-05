@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="t1">과거 데이터</h3>
+      <h3 class="t2">학습 결과</h3>
+      <div class="data">
+        <table>
+          <th>온도</th>
+          <th>판매량</th>
+          <tr>
+            <td>20</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>42</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>45</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>47</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>49</td>
+          </tr>
+        </table>
+      </div>
+      <div class="result">
+        <table id="resultTable">
+          <th>온도</th>
+          <th>판매량</th>
+          <tr>
+            <td>20</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>-</td>
+          </tr>
+        </table>
+      </div>
+      <div class="fit">
+        <input type="text" id="epochInput" value="100" />
+        <button type="button" id="fitBtn">Fit</button>
+        <div id="fitLog"></div>
+      </div>
+      <div class="model" id="modelDiv"></div>
+      <div class="predict">
+        <input type="text" id="preInput" />
+        <button type="button" id="preBtn">Predict</button>
+        <div id="preDiv"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
